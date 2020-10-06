@@ -1,0 +1,43 @@
+#!/bin/bash
+
+set -e
+
+REPO_ROOT="${BASH_SOURCE%/*}"
+
+cd "$REPO_ROOT"
+
+source bin/common
+
+log_info "Installing TypeScript"
+
+yarn --frozen-lockfile --no-default-rc --no-progress --silent
+
+log_info "Cleaning"
+
+git clean -fdxq -- lib
+git clean -fdxq -- fig/types
+
+log_info "Generating TypeScript types"
+
+node support/typegen
+
+log_info "Compiling TypeScript source to JavaScript"
+
+tsc
+
+# Hacks so that built JS can import from 'fig':
+ln -fns ../lib/fig node_modules/fig
+cat > lib/fig/package.json <<HERE
+{
+    "name": "fig",
+    "description": "An absurd configuration framework",
+    "version": "0.0.1",
+    "main": "index.js",
+    "private": true,
+    "type": "module"
+}
+HERE
+
+log_info "Running main"
+
+node lib/fig/main.js "$@"

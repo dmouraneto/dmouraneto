@@ -1,0 +1,28 @@
+{
+  "name": "dmouraneto",
+  "version": "1.0.0",
+  "description": "dotfiles and system configuration",
+  "main": "/dev/null",
+  "scripts": {
+    "ci": "yarn format:check",
+    "format:check": "npx prettier --check \"**/*.{js,json,md,ts}\" \"*.{md,ts}\" aspects/dotfiles/files/.zsh/liferay/bin/portool",
+    "format": "npx prettier --write \"**/*.{js,json,md,ts}\" \"*.{md,ts}\" aspects/dotfiles/files/.zsh/liferay/bin/portool"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmouraneto/dmouraneto.git"
+  },
+  "author": "Daniel Moura",
+  "type": "module",
+  "dependencies": {
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmouraneto/dmouraneto/issues"
+  },
+  "homepage": "https://github.com/dmouraneto/dmouraneto#readme"
+}

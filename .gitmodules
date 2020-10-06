@@ -1,0 +1,3 @@
+[submodule "vendor/wincent"]
+	path = wincentfig/wincent
+	url = https://github.com/wincent/wincent

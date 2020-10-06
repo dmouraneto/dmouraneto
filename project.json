@@ -1,0 +1,21 @@
+{
+  "platforms": {
+    "darwin": {
+      "aspects": [
+        "meta",
+        "karabiner"
+      ],
+      "variables": {}
+    },
+    "linux": {
+      "aspects": [],
+      "variables": {}
+    }
+  },
+  "profiles": {
+    "work": {
+      "pattern": "/\\bLOFT-RJM-0086\\b/i"
+    }
+  },
+  "variables": {}
+}
