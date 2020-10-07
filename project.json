@@ -3,7 +3,8 @@
     "darwin": {
       "aspects": [
         "meta",
-        "karabiner"
+        "karabiner",
+        "vim"
       ],
       "variables": {}
     },
