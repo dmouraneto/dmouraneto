@@ -1,6 +1,6 @@
-set number
-set relativenumber
-set nohlsearch
+set number " show current line number
+set relativenumber " use relative line numbers
+set nohlsearch " dont highlight matched searches
 set autoindent
 set smartindent
 set tabstop=2
