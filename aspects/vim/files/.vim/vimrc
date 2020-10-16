@@ -72,3 +72,8 @@ nnoremap : ;
 
 " shortcut to open vimrc
 nnoremap <leader>vr :e ~/.vim/vimrc<CR>
+
+" NERDTree
+nnoremap <leader>nn :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
+
