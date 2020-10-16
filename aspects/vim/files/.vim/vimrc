@@ -61,3 +61,10 @@ nnoremap <leader>cr :CocRestart
 
 " correct highlight for comments in json files
 autocmd FileType json syntax match Comment +\/\/.\+$+ 
+
+" git commit messages width
+autocmd BufRead, BufNewFile COMMIT_EDITMSG set textwidth=72
+
+" using ; instead of : to make easier enter ex/cmd-mode
+nnoremap ; : 
+nnoremap : ;
