@@ -15,7 +15,10 @@
   },
   "profiles": {
     "work": {
-      "pattern": "/\\bLOFT-RJM-0086\\b/i"
+      "pattern": "/\\bLOFT\\b/i"
+    },
+    "personal": {
+      "pattern": "/\\bAir\\b/i"
     }
   },
   "variables": {}
