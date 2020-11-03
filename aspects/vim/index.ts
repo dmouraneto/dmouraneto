@@ -1,9 +1,13 @@
-import { backup, file, path, task, variable } from "fig";
+import { backup, command, file, path, task, variable } from "fig";
 
 task("make directories", async () => {
   // Some overlap with "dotfiles" aspect here.
   await file({ path: "~/.backups", state: "directory" });
   await file({ path: "~/.config", state: "directory" });
+});
+
+task("install vim-plug", async () => {
+  await command('curl', ['-fLo', '~/.vim/autoload/plug.vim', '--create-dirs', 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim']);
 });
 
 task("link ~/.config/nvim to ~/.vim", async () => {
