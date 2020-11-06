@@ -5,6 +5,7 @@
         "meta",
         "homebrew",
         "karabiner",
+        "dotfiles",
         "vim"
       ],
       "variables": {}
